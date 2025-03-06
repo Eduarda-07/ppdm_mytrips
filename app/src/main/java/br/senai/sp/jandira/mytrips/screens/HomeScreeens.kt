@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -84,7 +85,7 @@ fun HomeScreen (modifier: Modifier = Modifier){
                     )
                 )
                 OutlinedTextField(
-                    value = "********",
+                    value = "text ",
                     onValueChange = {},
                     label = { Text("Password") },
                     modifier = Modifier
@@ -104,15 +105,36 @@ fun HomeScreen (modifier: Modifier = Modifier){
             Button(
                 onClick = {},
                 shape = RoundedCornerShape(8.dp),
+
                 modifier = Modifier
                     .padding(start = 180.dp)
+//                    .background(
+//                        color = Color(0xFFBA9BF8)
+//                    )
                 ) {
                     Text(
                         text = stringResource(
-                        R.string.sign_up
+                        R.string.sign_in
                         )
                     )
                 }
+            Row {
+                Text(
+                    text = stringResource(
+                        R.string.account
+                    ),
+                    color = Color(0xFFBA9BF8),
+                    fontSize = 20.sp,
+                )
+                Text(
+                    text = stringResource(
+                        R.string.sign_up
+                    ),
+                    color = Color(0xFF673AB7),
+                    fontSize = 20.sp,
+                )
+            }
+
        }
 
         Card (
